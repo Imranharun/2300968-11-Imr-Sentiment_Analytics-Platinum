@@ -3,7 +3,7 @@
 Hi, my name is [Imran](https://www.linkedin.com/in/imranharun/).
 This API is meant for Binar Academy challenge purpose - Data Science Wave 11.
 
-![Alt text](https://drive.google.com/file/d/1HeDe8-t20om1QaCwVn-SYZTkzgVJEzag/view?usp=drive_link)
+![Alt text](/logo binar/logo binar.png)
 
 ## Model file(s)
 
