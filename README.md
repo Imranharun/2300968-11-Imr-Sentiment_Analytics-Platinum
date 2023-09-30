@@ -1,4 +1,9 @@
-# DSC Challange
+# Data Science Challange - Platinum
+
+Hi, my name is [Imran](https://www.linkedin.com/in/imranharun/).
+This API is meant for Binar Academy challenge purpose - Data Science Wave 11.
+
+![Alt text]https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/Binar_-_Logo_warna.original.png
 
 ## Model file(s)
 
