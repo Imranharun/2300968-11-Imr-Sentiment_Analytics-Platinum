@@ -3,17 +3,19 @@ from fastapi import Query
 from services.sentiment import get_sentiment, get_sentiment_file
 import pandas as pd
 from fastapi import FastAPI, File, UploadFile
+import io
 
 router = APIRouter()
 
 @router.get("/sentiment")
 async def sentiment_analytics(
-    sentence: str = Query(default = "")
+    sentence: str = Query(default = ""),
+    model_type: str = Query(default="huggingface", enum=["huggingface", "nn", "rnn", "lstm", "lstm fine tuned", "nn fine tuned", "rnn fine tuned"])
 ):
-    result = await get_sentiment(sentence)
+    result = await get_sentiment(sentence, model_type)
     return result
 
-import io
+
 @router.post("/sentiment-upload")
 async def upload_file(file: UploadFile = File(...)):
     try:
