@@ -1,63 +1,174 @@
-# Data Science Challange - Platinum
+# Data Science Challange - Platinum (BINAR Academy)
 
-## Introduction
 Hi, my name is [Imranharun Mughni Hutomo](https://www.linkedin.com/in/imranharun/).
-This API is meant for Binar Academy challenge purpose - Data Science Wave 11.
+
+This project is meant for Binar Academy Data Science Bootcamp.
 
 ![Alt text](https://raw.githubusercontent.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/master/logo%20binar/logo%20binar.png)
 
+## Sentiment Analytics Service
 
-## Prerequisites  & Installing
+This project contains Sentiment Analytics AI for any messages. Its main feature to classify whether a message has **Negative** or **Positive** sentiment in its sentence / message automatically.
+
+The main purpose of the service is user can easily classify a sentiment of a message, which most commonly used in **Product Review** and **Social Media Feedbacks** analytics. Although, this service comes in **API form** and has AI models in it, the models were sampled / made in **Bahasa Indonesia**/**Indonesian language**, so it will only work properly with **Indonesian** language.
+
+Since the tool process words and sentences, it's fully aware that some of the messages are not always ***clean text***(contains: emoji, RT, etc), thus the tool also capable to clean the sentences we input, before it continues to begin the **Sentiment Analytics** process.
+
+The tool uses **SQLite3** to fetch & store data into database and **FastAPI** to generate **SwaggerUI** for its services.
+
+## How to run the API?
  
- 
-Create conda env:
- 
- 
+First thing first, you need to download and open the terminal in your source-code, and follow these steps to install the needed aspects before we get to run the API.
+
+There are a few things that required to be installed in your environment and the AI models before you get to run the API.
+
+### Prerequisites  & Installing (CONDA)
+
+1. Create conda virtual environment:
 ``
 conda create --n openai_env python=3.9
 ``
- 
-Activate env:
- 
- 
+
+2. Activate your environment:
 ``
 conda activate openai_env
 ``
- 
-Install All Depedencies :
+
+3. Install All Depedencies: **it will install the neccessary libraries to run the API**
  
 ``
 pip install -r requirements.txt
 ``
- 
-Run :
- 
+
+4. Run / Hit the API with:
+
 ``
 make run
 ``
+***If you have issues on the first one, try the Alternative Command***
+``
+uvicorn main:app --reload --log-level debug --port 8200
+``
 
-## Model file(s)
+### Inputting the model files
 
-Since the files are considered to be large by git, files can be downloaded on this url:
+You are required to put all the 7 model files into the folder **models/**put the models here.
 
+You can download the models through this link:
 [Download Models Here](https://drive.google.com/drive/folders/10KitDcOeGgmdKqj50BwrQNYXRx3v-6Uv?usp=sharing)
 
+Right after you've completely put all the necessary files, the API is good to go.
 
-Put the model files to the **model-deploy-learn/models/**, you can choose any of the models;
 
-Files in the link as in .h5 or .p formats.
+## The Usage of its service & The expected output
 
-### Model Description
+There are 3 API services that you can use, which will be explained briefly on how to use it and the expected output for each service / feature.
+
+[Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161646620874653756/image.png?ex=65390eb8&is=652699b8&hm=67332397e88a5a5e046c4b185c929547dbe6297f642b95355250e14cd7edf984&)
+
+
+### Cleansing API (Text Cleansing)
+
+This service will let you cleanse/remove the following aspects below from your words/sentence:
+
+1. Hashtags attached to a word
+2. Symbols
+3. Emojis
+4. Word: user (after being lowered case by the cleansing code) - user as Twitter text context
+5. 'ø', 'ù', 'º', 'ð', etc
+6. Repeated words
+7. /n or enter
+8. Spaces
+
+Any words/sentences you input that has the following aspects mentioned above will be ***cleansed***.
+
+#### How to use Cleansing API (Text Cleansing)
+
+These are the following steps to use it:
+1. Click on the service, and it will ask you to ***try it out***.
+2. The ***sentence*** box will now be able to be inputted, you may input any words / sentence.
+3. Hit the **Execute** button
+4. The output will be shown in the **Server Responses** section. 
+
+### Sentiment API
+
+This service will perform **Sentiment Analytics** on the words/sentence you input. It will automatically classify whether your message is ***Negative*** or ***Positive***.
+
+It has 7 models you can choose, each models has their own scoring system, but the expected output are the same. The differences between each models are **execution time** and **accuracy**.
+
+There are two features with the same idea/purpose, although the usage of both services have different steps.
+
+#### How to use the Sentiment API: Sentiment Analytics
+
+[Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161650238172450926/image.png?ex=65391217&is=65269d17&hm=b110703ad0447494130bd3fb5bc7b0a9decd2334eba7c554a57ed4a451f63705&)
+
+This feature will label your text **Negative** or **Positive** as the output.
+
+These are the following steps to use it:
+1. Click on the service, and it will ask you to ***try it out***.
+2. The ***sentence*** box will now be able to be inputted, you may input any words / sentence.
+3. There will be a drop down, it contains 7 AI models you can choose, please choose one or stay with the default.
+4. Hit the **Execute** button
+5. The output will be shown in the **Server Responses** section.
+
+#### How to use the Sentiment API: Upload-File
+
+The purpose of this feature is to let you do Sentiment Analytics in bulk
+
+[Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161653705788104714/image.png?ex=65391551&is=6526a051&hm=3bf29686b974dd1dd1a84603a1257bbc308c8abd49d9a2e57d1f8a51b21743c9&)
+
+This feature will let you upload a .csv file and it will insert the data into the databse then it will perform the Sentiment Analytics to label each data.
+
+These are the following steps to use it:
+1. Click on the service, and it will ask you to ***try it out***.
+2. The ***file*** box will now be available and now you can choose your .csv file.
+3. Hit the **Execute** button
+4. All the data from your .csv will be labelled and shown in the **Server Responses** section.
+
+There are a couple things you must know to get the service runs properly:
+1. Your .csv may only contain 1 column
+2. The column name must be "tweets"
+3. There are no restriction on how many rows you can have.
+
+### Database API
+
+In this service, you can check the databse you've inputted from the Sentiment API, there are 2 features inside this service. Each of these services use SQL Syntax to perform their service.
+
+1. Get Data:
+This will let you see all the database data that have been inserted before.
+
+2. Get Data by Sentiment:
+This will let you see all the database data that have been inserted before with **SORTING** feature based on the Sentiment each data.
+
+#### How to use Database API: Get Data
+
+1. Click on the service, and it will ask you to ***try it out***.
+2. It will show no paramter, only **Execute** button.
+3. Hit the **Execute** button.
+4. The output will be shown in the **Server Responses** section.
+
+#### How to use Database API: Get Data by Sentiment
+
+[Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161655769054322819/image.png?ex=6539173d&is=6526a23d&hm=1488d9c43dab5724418ddcfe7d790ed0a05da80588911ac7cac23ed78f897b24&)
+
+1. Click on the service, and it will ask you to ***try it out***.
+2. Choose the Sentiment from the dropdown.
+3. Hit the **Execute** button.
+4. The output will be shown in the **Server Responses** section.
+
+
+## Model Descriptions
+
+These models are the ones being used in each services that has **Sentiment Analytics** process, you can see the overall accuracy/effectiveness in each models based on the visualization below.
 
 There are 7 models in this API:
 
 1. [huggingface (ayameRushia)](https://huggingface.co/ayameRushia/bert-base-indonesian-1.5G-sentiment-analysis-smsa)
-
 2. NN (Neural Network)
 3. RNN (Recurrent Neural Network)
 4. LSTM (Long Short Term Memory Network)
 
-Fine Tuned Ver.: This version applied with k-fold cross validation
+Fine Tuned Version: This version applied with k-fold cross validation
 
 5. LSTM Fine Tuned
 6. NN Fine Tuned
@@ -74,60 +185,3 @@ With Cross Validation & Without
 #### Overall Loss & Accuracy from both Models
 
 ![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/all%20accuracy.png?raw=true)
-
-## API & ITS FEATURES (Simple Documentation)
-
-### Cleansing API
-
-Cleans text data, it removes:
-
-    1. Hashtags attached to a word
-    2. Symbols
-    3. Emojis
-    4. Word: user (after being lowered case by the cleansing code) - user as Twitter text context
-    5. 'ø', 'ù', 'º', 'ð', etc
-    6. Repeated words
-    7. /n or enter
-    8. Spaces
-
-### Sentiment API
-
-####
-Sentiment Analytics with 7 different models, check the API code and the report.
-
-#### Sentiment Analytics
-
-You will require to insert a text into the box, it will show the sentiment of the sentence you submit. Although, this will only work in Bahasa Indonesia language.
-
-![Altimage](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/sentiment.png?raw=true)
-
-#### Sentiment Upload
-
-You will be able to upload CSV data in this service, the uploaded file will be put into the DB under the name "tweets.db" and it will be classified by the Sentiment Analytics.
-
-The purpose of this service is to get sentiment in a bulk, so you won't need to put each text data manually 
-
-``
-routers/sentiment.py
-``
-and,
-
-``
-services/sentiment.py
-``
-
-### Database API
-
-In this service I apply SQL Syntax for this service. There are two service routes within this feature
-
-#### Get DB
-
-This will get all data from the tweets.db.
-
-![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161594248886493184/image.png?ex=6538ddf2&is=652668f2&hm=c751f366b5e252fbbdb9d577600e540a395a813a47e84d157f34d0322f9e1b4a&)
-
-#### Get DB w/ filter
-
-Get the DB the filter / sorting based on the dropdown.
-
-![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161594318067355648/image.png?ex=6538de02&is=65266902&hm=10b70e29baf3b8adb1cf62d5cca9b8c6a35eec4e382417eec93fd59b3850edd8&)
