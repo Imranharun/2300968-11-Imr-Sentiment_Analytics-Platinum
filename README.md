@@ -1,12 +1,10 @@
-# Data Science Challange - Platinum (BINAR Academy)
-
 Hi, my name is [Imranharun Mughni Hutomo](https://www.linkedin.com/in/imranharun/).
 
 This project is meant for Binar Academy Data Science Bootcamp.
 
 ![Alt text](https://raw.githubusercontent.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/master/logo%20binar/logo%20binar.png)
 
-## Sentiment Analytics Service
+# Sentiment Analytics Service
 
 This project contains Sentiment Analytics AI for any messages. Its main feature to classify whether a message has **Negative** or **Positive** sentiment in its sentence / message automatically.
 
@@ -22,7 +20,7 @@ First thing first, you need to download and open the terminal in your source-cod
 
 There are a few things that required to be installed in your environment and the AI models before you get to run the API.
 
-### Prerequisites  & Installing (CONDA)
+## Prerequisites  & Installing (CONDA)
 
 1. Create conda virtual environment:
 ``
@@ -34,7 +32,7 @@ conda create --n openai_env python=3.9
 conda activate openai_env
 ``
 
-3. Install All Depedencies: **it will install the neccessary libraries to run the API**
+3. Install All Depedencies:
  
 ``
 pip install -r requirements.txt
@@ -50,7 +48,7 @@ make run
 uvicorn main:app --reload --log-level debug --port 8200
 ``
 
-### Inputting the model files
+## Inputting the model files
 
 You are required to put all the 7 model files into the folder **models/**put the models here.
 
@@ -60,37 +58,37 @@ You can download the models through this link:
 Right after you've completely put all the necessary files, the API is good to go.
 
 
-## The Usage of its service & The expected output
+# The Usage of its service & The expected output
 
 There are 3 API services that you can use, which will be explained briefly on how to use it and the expected output for each service / feature.
 
-[Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161646620874653756/image.png?ex=65390eb8&is=652699b8&hm=67332397e88a5a5e046c4b185c929547dbe6297f642b95355250e14cd7edf984&)
+![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161646620874653756/image.png?ex=65390eb8&is=652699b8&hm=67332397e88a5a5e046c4b185c929547dbe6297f642b95355250e14cd7edf984&)
 
 
-### Cleansing API (Text Cleansing)
+## Cleansing API (Text Cleansing)
 
 This service will let you cleanse/remove the following aspects below from your words/sentence:
 
-1. Hashtags attached to a word
-2. Symbols
-3. Emojis
-4. Word: user (after being lowered case by the cleansing code) - user as Twitter text context
-5. 'ø', 'ù', 'º', 'ð', etc
-6. Repeated words
-7. /n or enter
-8. Spaces
+    1. Hashtags attached to a word
+    2. Symbols
+    3. Emojis
+    4. Word: user (after being lowered case by the cleansing code) - user as Twitter text context
+    5. 'ø', 'ù', 'º', 'ð', etc
+    6. Repeated words
+    7. /n or enter
+    8. Spaces
 
 Any words/sentences you input that has the following aspects mentioned above will be ***cleansed***.
 
-#### How to use Cleansing API (Text Cleansing)
+### How to use Cleansing API (Text Cleansing)
 
 These are the following steps to use it:
-1. Click on the service, and it will ask you to ***try it out***.
-2. The ***sentence*** box will now be able to be inputted, you may input any words / sentence.
-3. Hit the **Execute** button
-4. The output will be shown in the **Server Responses** section. 
+    1. Click on the service, and it will ask you to ***try it out***.
+    2. The ***sentence*** box will now be able to be inputted, you may input any words / sentence.
+    3. Hit the **Execute** button
+    4. The output will be shown in the **Server Responses** section. 
 
-### Sentiment API
+## Sentiment API
 
 This service will perform **Sentiment Analytics** on the words/sentence you input. It will automatically classify whether your message is ***Negative*** or ***Positive***.
 
@@ -98,39 +96,39 @@ It has 7 models you can choose, each models has their own scoring system, but th
 
 There are two features with the same idea/purpose, although the usage of both services have different steps.
 
-#### How to use the Sentiment API: Sentiment Analytics
+### How to use the Sentiment API: Sentiment Analytics
 
-[Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161650238172450926/image.png?ex=65391217&is=65269d17&hm=b110703ad0447494130bd3fb5bc7b0a9decd2334eba7c554a57ed4a451f63705&)
+![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161650238172450926/image.png?ex=65391217&is=65269d17&hm=b110703ad0447494130bd3fb5bc7b0a9decd2334eba7c554a57ed4a451f63705&)
 
 This feature will label your text **Negative** or **Positive** as the output.
 
 These are the following steps to use it:
-1. Click on the service, and it will ask you to ***try it out***.
-2. The ***sentence*** box will now be able to be inputted, you may input any words / sentence.
-3. There will be a drop down, it contains 7 AI models you can choose, please choose one or stay with the default.
-4. Hit the **Execute** button
-5. The output will be shown in the **Server Responses** section.
+    1. Click on the service, and it will ask you to ***try it out***.
+    2. The ***sentence*** box will now be able to be inputted, you may input any words / sentence.
+    3. There will be a drop down, it contains 7 AI models you can choose, please choose one or stay with the default.
+    4. Hit the **Execute** button
+    5. The output will be shown in the **Server Responses** section.
 
-#### How to use the Sentiment API: Upload-File
+### How to use the Sentiment API: Upload-File
 
 The purpose of this feature is to let you do Sentiment Analytics in bulk
 
-[Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161653705788104714/image.png?ex=65391551&is=6526a051&hm=3bf29686b974dd1dd1a84603a1257bbc308c8abd49d9a2e57d1f8a51b21743c9&)
+![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161653705788104714/image.png?ex=65391551&is=6526a051&hm=3bf29686b974dd1dd1a84603a1257bbc308c8abd49d9a2e57d1f8a51b21743c9&)
 
 This feature will let you upload a .csv file and it will insert the data into the databse then it will perform the Sentiment Analytics to label each data.
 
 These are the following steps to use it:
-1. Click on the service, and it will ask you to ***try it out***.
-2. The ***file*** box will now be available and now you can choose your .csv file.
-3. Hit the **Execute** button
-4. All the data from your .csv will be labelled and shown in the **Server Responses** section.
+    1. Click on the service, and it will ask you to ***try it out***.
+    2. The ***file*** box will now be available and now you can choose your .csv file.
+    3. Hit the **Execute** button
+    4. All the data from your .csv will be labelled and shown in the **Server Responses** section.
 
 There are a couple things you must know to get the service runs properly:
-1. Your .csv may only contain 1 column
-2. The column name must be "tweets"
-3. There are no restriction on how many rows you can have.
+    1. Your .csv may only contain 1 column
+    2. The column name must be "tweets"
+    3. There are no restriction on how many rows you can have.
 
-### Database API
+## Database API
 
 In this service, you can check the databse you've inputted from the Sentiment API, there are 2 features inside this service. Each of these services use SQL Syntax to perform their service.
 
@@ -140,24 +138,24 @@ This will let you see all the database data that have been inserted before.
 2. Get Data by Sentiment:
 This will let you see all the database data that have been inserted before with **SORTING** feature based on the Sentiment each data.
 
-#### How to use Database API: Get Data
+### How to use Database API: Get Data
 
-1. Click on the service, and it will ask you to ***try it out***.
-2. It will show no paramter, only **Execute** button.
-3. Hit the **Execute** button.
-4. The output will be shown in the **Server Responses** section.
+    1. Click on the service, and it will ask you to ***try it out***.
+    2. It will show no paramter, only **Execute** button.
+    3. Hit the **Execute** button.
+    4. The output will be shown in the **Server Responses** section.
 
-#### How to use Database API: Get Data by Sentiment
+### How to use Database API: Get Data by Sentiment
 
-[Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161655769054322819/image.png?ex=6539173d&is=6526a23d&hm=1488d9c43dab5724418ddcfe7d790ed0a05da80588911ac7cac23ed78f897b24&)
+![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161655769054322819/image.png?ex=6539173d&is=6526a23d&hm=1488d9c43dab5724418ddcfe7d790ed0a05da80588911ac7cac23ed78f897b24&)
 
-1. Click on the service, and it will ask you to ***try it out***.
-2. Choose the Sentiment from the dropdown.
-3. Hit the **Execute** button.
-4. The output will be shown in the **Server Responses** section.
+    1. Click on the service, and it will ask you to ***try it out***.
+    2. Choose the Sentiment from the dropdown.
+    3. Hit the **Execute** button.
+    4. The output will be shown in the **Server Responses** section.
 
 
-## Model Descriptions
+# Model Descriptions
 
 These models are the ones being used in each services that has **Sentiment Analytics** process, you can see the overall accuracy/effectiveness in each models based on the visualization below.
 
@@ -174,7 +172,7 @@ Fine Tuned Version: This version applied with k-fold cross validation
 6. NN Fine Tuned
 7. RNN Fine Tuned
 
-#### Loss & Accuracy Each Models
+### Loss & Accuracy Each Models
 
 Model: NN (MLP), RNN & LSTM
 ![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/visualization%20model%201.png?raw=true)
@@ -182,6 +180,6 @@ Model: NN (MLP), RNN & LSTM
 With Cross Validation & Without
 ![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/model%20with%20cv.png?raw=true)
 
-#### Overall Loss & Accuracy from both Models
+### Overall Loss & Accuracy from both Models
 
 ![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/all%20accuracy.png?raw=true)
