@@ -68,7 +68,12 @@ Fine Tuned Ver.: This version applied with k-fold cross validation
 Model: NN (MLP), RNN & LSTM
 ![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/visualization%20model%201.png?raw=true)
 
-![Alt image](https://cdn.discordapp.com/attachments/1080523743534784592/1161592644032528425/image.png?ex=6538dc73&is=65266773&hm=3dc05bd4598b81f8e46e029245d0edc280d2e05edfea851dc353e400d359a9c9&)
+With Cross Validation & Without
+![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/model%20with%20cv.png?raw=true)
+
+#### Overall Loss & Accuracy from both Models
+
+![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/all%20accuracy.png?raw=true)
 
 ## API & ITS FEATURES (Simple Documentation)
 
@@ -93,6 +98,8 @@ Sentiment Analytics with 7 different models, check the API code and the report.
 #### Sentiment Analytics
 
 You will require to insert a text into the box, it will show the sentiment of the sentence you submit. Although, this will only work in Bahasa Indonesia language.
+
+![Altimage](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/sentiment.png?raw=true)
 
 #### Sentiment Upload
 
