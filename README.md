@@ -65,7 +65,10 @@ Fine Tuned Ver.: This version applied with k-fold cross validation
 
 #### Loss & Accuracy Each Models
 
+Model: NN (MLP), RNN & LSTM
+![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/visualization%20model%201.png?raw=true)
 
+![Alt image](https://cdn.discordapp.com/attachments/1080523743534784592/1161592644032528425/image.png?ex=6538dc73&is=65266773&hm=3dc05bd4598b81f8e46e029245d0edc280d2e05edfea851dc353e400d359a9c9&)
 
 ## API & ITS FEATURES (Simple Documentation)
 
