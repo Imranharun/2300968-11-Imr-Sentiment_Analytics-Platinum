@@ -144,9 +144,13 @@ There are a couple things you must know to get the service runs properly:
 In this service, you can check the databse you've inputted from the Sentiment API, there are 2 features inside this service. Each of these services use SQL Syntax to perform their service.
 
 1. Get Data:
+
+
 This will let you see all the database data that have been inserted before.
 
 2. Get Data by Sentiment:
+
+
 This will let you see all the database data that have been inserted before with **SORTING** feature based on the Sentiment each data.
 
 ### How to use Database API: Get Data
