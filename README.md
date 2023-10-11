@@ -124,6 +124,10 @@ In this service I apply SQL Syntax for this service. There are two service route
 
 This will get all data from the tweets.db.
 
+![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161594248886493184/image.png?ex=6538ddf2&is=652668f2&hm=c751f366b5e252fbbdb9d577600e540a395a813a47e84d157f34d0322f9e1b4a&)
+
 #### Get DB w/ filter
 
 Get the DB the filter / sorting based on the dropdown.
+
+![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161594318067355648/image.png?ex=6538de02&is=65266902&hm=10b70e29baf3b8adb1cf62d5cca9b8c6a35eec4e382417eec93fd59b3850edd8&)
