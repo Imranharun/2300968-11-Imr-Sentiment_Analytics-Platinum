@@ -1,8 +1,8 @@
+![Alt text](https://raw.githubusercontent.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/master/logo%20binar/logo%20binar.png)
+
 Hi, my name is [Imranharun Mughni Hutomo](https://www.linkedin.com/in/imranharun/).
 
 This project is meant for Binar Academy Data Science Bootcamp.
-
-![Alt text](https://raw.githubusercontent.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/master/logo%20binar/logo%20binar.png)
 
 # Sentiment Analytics Service
 
@@ -69,7 +69,7 @@ You can download the models through this link:
 Right after you've completely put all the necessary files, the API is good to go.
 
 
-# The Usage of its service & The expected output
+# The usage of its service & The expected output
 
 There are 3 API services that you can use, which will be explained briefly on how to use it and the expected output for each service / feature.
 
