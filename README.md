@@ -23,27 +23,38 @@ There are a few things that required to be installed in your environment and the
 ## Prerequisites  & Installing (CONDA)
 
 1. Create conda virtual environment:
+
+
 ``
 conda create --n openai_env python=3.9
 ``
 
 2. Activate your environment:
+
+
 ``
 conda activate openai_env
 ``
 
 3. Install All Depedencies:
- 
+
+
 ``
 pip install -r requirements.txt
 ``
 
+
 4. Run / Hit the API with:
+
 
 ``
 make run
 ``
+
+
 ***If you have issues on the first one, try the Alternative Command***
+
+
 ``
 uvicorn main:app --reload --log-level debug --port 8200
 ``
