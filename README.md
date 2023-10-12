@@ -71,12 +71,29 @@ Right after you've completely put all the necessary files, the API is good to go
 
 # The usage of its service & The expected output
 
-There are 3 API services that you can use, which will be explained briefly on how to use it and the expected output for each service / feature.
+There are 3 main API services that you can use, which will be explained briefly on how to use it and the expected output for each service / feature.
+
+1. Default
+
+        Ignore this one, this is just the default route from the API. Which its expected output is to check whether the API successfully running or not.
+2. Cleansing API
+
+        It will perform text-cleansing on your data.
+
+3. Sentiment API
+
+        It will perform Sentiment Analytics on your text data.
+
+4. Database API
+
+        It will show you the Database you've created along the process of this tool.
+
+To fully understand the each functions have been mentioned above, please check the tutorial below.
 
 ![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161646620874653756/image.png?ex=65390eb8&is=652699b8&hm=67332397e88a5a5e046c4b185c929547dbe6297f642b95355250e14cd7edf984&)
 
 
-## Cleansing API (Text Cleansing)
+## Cleansing API: Text Cleansing
 
 This service will let you cleanse/remove the following aspects below from your words/sentence:
 
@@ -172,7 +189,9 @@ This will let you see all the database data that have been inserted before with 
 
 # Model Descriptions
 
-These models are the ones being used in each services that has **Sentiment Analytics** process, you can see the overall accuracy/effectiveness in each models based on the visualization below.
+To get the Sentiment Analytics running, we need AI Model behind its action. Thus these models are the ones who perform Sentiment Analytics in the process of each function/features we have talked about in the Tutorial section above.
+
+As you can see that we have 7 AI Models that can be chose in the **Sentiment Analytics**, here are the lists.
 
 There are 7 models in this API:
 
@@ -180,14 +199,15 @@ There are 7 models in this API:
 2. NN (Neural Network)
 3. RNN (Recurrent Neural Network)
 4. LSTM (Long Short Term Memory Network)
-
-Fine Tuned Version: This version applied with k-fold cross validation
-
 5. LSTM Fine Tuned
 6. NN Fine Tuned
 7. RNN Fine Tuned
 
-### Loss & Accuracy Each Models
+        Fine Tuned Version: This version applied with k-fold cross validation.
+
+## Loss & Accuracy Each Models
+
+Here are the visualization on each Accuracy & Loss from each AI models based on the training & testing with [IndoNLP/Indonlu Dataset](https://github.com/IndoNLP/indonlu/tree/master/dataset).
 
 Model: NN (MLP), RNN & LSTM
 ![Alt image](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/visualization%20model%201.png?raw=true)
