@@ -201,7 +201,7 @@ To get the Sentiment Analytics running, we need AI Model behind its action. Thus
 
 ![Altimage](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/sentiment.png?raw=true)
 
-As you can see that we have 7 AI Models that can be chose in the **Sentiment Analytics**, here are the lists.
+As you can see that we have 7 AI Models that can be chosen in the **Sentiment Analytics**, here are the lists.
 
 There are 7 models in this API:
 
