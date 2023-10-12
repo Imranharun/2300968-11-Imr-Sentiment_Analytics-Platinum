@@ -111,10 +111,11 @@ Any words/sentences you input that has the following aspects mentioned above wil
 ### How to use Cleansing API (Text Cleansing)
 
 These are the following steps to use it:
-    1. Click on the service, and it will ask you to ***try it out***.
-    2. The ***sentence*** box will now be able to be inputted, you may input any words / sentence.
-    3. Hit the **Execute** button
-    4. The output will be shown in the **Server Responses** section. 
+
+    1. Click on the service, and it will ask you to try it out.
+    2. The sentence box will now be able to be inputted, you may input any words / sentence.
+    3. Hit the Execute button
+    4. The output will be shown in the Server Responses section. 
 
 ## Sentiment API
 
@@ -131,11 +132,12 @@ There are two features with the same idea/purpose, although the usage of both se
 This feature will label your text **Negative** or **Positive** as the output.
 
 These are the following steps to use it:
-    1. Click on the service, and it will ask you to ***try it out***.
-    2. The ***sentence*** box will now be able to be inputted, you may input any words / sentence.
+
+    1. Click on the service, and it will ask you to try it out.
+    2. The sentence box will now be able to be inputted, you may input any words / sentence.
     3. There will be a drop down, it contains 7 AI models you can choose, please choose one or stay with the default.
-    4. Hit the **Execute** button
-    5. The output will be shown in the **Server Responses** section.
+    4. Hit the Execute button.
+    5. The output will be shown in the Server Responses section.
 
 ### How to use the Sentiment API: Upload-File
 
@@ -146,12 +148,14 @@ The purpose of this feature is to let you do Sentiment Analytics in bulk
 This feature will let you upload a .csv file and it will insert the data into the databse then it will perform the Sentiment Analytics to label each data.
 
 These are the following steps to use it:
-    1. Click on the service, and it will ask you to ***try it out***.
-    2. The ***file*** box will now be available and now you can choose your .csv file.
-    3. Hit the **Execute** button
-    4. All the data from your .csv will be labelled and shown in the **Server Responses** section.
+
+    1. Click on the service, and it will ask you to try it out.
+    2. The file box will now be available and now you can choose your .csv file.
+    3. Hit the Execute button
+    4. All the data from your .csv will be labelled and shown in the Server Responses section.
 
 There are a couple things you must know to get the service runs properly:
+
     1. Your .csv may only contain 1 column
     2. The column name must be "tweets"
     3. There are no restriction on how many rows you can have.
@@ -172,24 +176,26 @@ This will let you see all the database data that have been inserted before with 
 
 ### How to use Database API: Get Data
 
-    1. Click on the service, and it will ask you to ***try it out***.
-    2. It will show no paramter, only **Execute** button.
-    3. Hit the **Execute** button.
-    4. The output will be shown in the **Server Responses** section.
+    1. Click on the service, and it will ask you to try it out.
+    2. It will show no paramter, only Execute button.
+    3. Hit the Execute button.
+    4. The output will be shown in the Server Responses section.
 
 ### How to use Database API: Get Data by Sentiment
 
 ![Altimage](https://cdn.discordapp.com/attachments/1080523743534784592/1161655769054322819/image.png?ex=6539173d&is=6526a23d&hm=1488d9c43dab5724418ddcfe7d790ed0a05da80588911ac7cac23ed78f897b24&)
 
-    1. Click on the service, and it will ask you to ***try it out***.
+    1. Click on the service, and it will ask you to try it out.
     2. Choose the Sentiment from the dropdown.
-    3. Hit the **Execute** button.
-    4. The output will be shown in the **Server Responses** section.
+    3. Hit the Execute button.
+    4. The output will be shown in the Server Responses section.
 
 
 # Model Descriptions
 
 To get the Sentiment Analytics running, we need AI Model behind its action. Thus these models are the ones who perform Sentiment Analytics in the process of each function/features we have talked about in the Tutorial section above.
+
+![Altimage](https://github.com/Imranharun/2300968-11-Imr-Sentiment_Analytics-Platinum/blob/master/visualization/sentiment.png?raw=true)
 
 As you can see that we have 7 AI Models that can be chose in the **Sentiment Analytics**, here are the lists.
 
