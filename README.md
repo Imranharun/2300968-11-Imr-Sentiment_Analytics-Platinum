@@ -61,7 +61,11 @@ uvicorn main:app --reload --log-level debug --port 8200
 
 ## Inputting the model files
 
-You are required to put all the 7 model files into the folder **models/**put the models here.
+You are required to put all the 7 model files into the folder **models/** put the models here.
+
+``
+models/put your model file(s) here
+``
 
 You can download the models through this link:
 [Download Models Here](https://drive.google.com/drive/folders/10KitDcOeGgmdKqj50BwrQNYXRx3v-6Uv?usp=sharing)
